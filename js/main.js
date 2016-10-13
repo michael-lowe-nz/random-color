@@ -10,10 +10,20 @@ document.getElementById("party").addEventListener("click",function(){
 });
 
 function changeColor(){
+  console.log("changing color");
   currentColor = generateColor();
-  $("#screenWrapper").css("background-color",currentColor);
-  $("#hex-value").html(currentColor);
+  var currentColorFormatted = '"'+currentColor+'"';
+  console.log("currentColor: "+currentColor);
+  console.log("formatted: "+currentColorFormatted);
+  var myElement = document.getElementById("screenWrapper");
+  myElement.style.backgroundColor= currentColor;
 }
+
+// function changeColor(){
+//   currentColor = generateColor();
+//   $("#screenWrapper").css("background-color",currentColor);
+//   $("#hex-value").html(currentColor);
+// }
 
 function clear () {
   savedColors = [];
