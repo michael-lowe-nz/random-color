@@ -2,13 +2,18 @@ var currentColor = "#000000"
 var savedColors = [];
 document.getElementById("save").addEventListener("click",saveColor);
 document.getElementById("clear-button").addEventListener("click",clear);
-
-
 document.getElementById("generate").addEventListener("click",function(){
+  changeColor()
+});
+document.getElementById("party").addEventListener("click",function(){
+  setInterval(function(){changeColor();}, 100);
+});
+
+function changeColor(){
   currentColor = generateColor();
   $("#screenWrapper").css("background-color",currentColor);
   $("#hex-value").html(currentColor);
-});
+}
 
 function clear () {
   savedColors = [];
