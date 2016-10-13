@@ -22,10 +22,18 @@
   /*margin-right: 10px;*/
 }
 
+#title {
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
 .button {
   /*display: relative;*/
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size: 20px;
   background-color: white;
-  color: #d8b7d3;
+  color: gray;
   width: 100px;
   margin: 20px;
   margin-right: 0;
@@ -71,16 +79,16 @@
   width: 100%;
   position: fixed;
   bottom: 0;
-  height: 10%;
+  height: 50px;
   background-color: white;
   display: flex;
 }
-
+/*
 @media (max-width: 600px) {
   .footer {
     display: block;
   }
-}
+}*/
 
 #saved-box {
   width: 80%;
@@ -102,5 +110,5 @@
 #clear-button {
   color: #95999A;
   margin: 5px 0;
-  padding: 0 10px;
+  padding: 10px 10px;
 }

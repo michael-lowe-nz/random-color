@@ -10,13 +10,12 @@ document.getElementById("party").addEventListener("click",function(){
 });
 
 function changeColor(){
-  console.log("changing color");
   currentColor = generateColor();
-  var currentColorFormatted = '"'+currentColor+'"';
-  console.log("currentColor: "+currentColor);
-  console.log("formatted: "+currentColorFormatted);
   var myElement = document.getElementById("screenWrapper");
   myElement.style.backgroundColor= currentColor;
+  var myElement = document.getElementById("hex-value");
+  console.log(myElement);
+  myElement.innerHTML = currentColor;
 }
 
 // function changeColor(){
@@ -27,7 +26,8 @@ function changeColor(){
 
 function clear () {
   savedColors = [];
-  $("#saved-box").html("");
+  // $("#saved-box").html("");
+  document.getElementById("saved-box").innerHTML = "";
 }
 
 function generateColor(){
