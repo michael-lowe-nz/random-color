@@ -16,12 +16,14 @@ function generateColor(){
 }
 
 function saveColor() {
+  if (currentColor == savedColors[savedColors.length-1]){
+    return;
+  }
   savedColors.push(currentColor);
   console.log("saving color...");
   $("#saved-box").html("");
   for (var i = 0; i < savedColors.length; i++){
     var myColor = savedColors[i];
     $("#saved-box").append('<div class="saved-color" style="background-color:'+myColor+';"></div>');
-    // $("#saved-box:nth-child(i+1)").css("background-color",currentColor);
   }
 }
