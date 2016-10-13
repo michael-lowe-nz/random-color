@@ -80,3 +80,9 @@
   margin: 2px 10px;
   text-align:center;
 }
+
+#clear-button {
+  color: #95999A;
+  margin: 5px 0;
+  padding: 0 10px;
+}

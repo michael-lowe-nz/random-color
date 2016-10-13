@@ -1,5 +1,8 @@
 var currentColor = "#000000"
 var savedColors = [];
+document.getElementById("save").addEventListener("click",saveColor);
+document.getElementById("clear-button").addEventListener("click",clear);
+
 
 document.getElementById("generate").addEventListener("click",function(){
   currentColor = generateColor();
@@ -7,9 +10,10 @@ document.getElementById("generate").addEventListener("click",function(){
   $("#hex-value").html(currentColor);
 });
 
-document.getElementById("save").addEventListener("click",saveColor);
-
-
+function clear () {
+  savedColors = [];
+  $("#saved-box").html("");
+}
 
 function generateColor(){
   return '#' + Math.random().toString(16).slice(2, 8);
